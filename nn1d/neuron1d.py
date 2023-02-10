@@ -26,32 +26,33 @@ def sigmoid(x):
 def relu(x):
     return np.maximum(x, 0)
 
-# generating an array 
-x = np.linspace(-10, 10, 100)
+if __name__ == "__main__":
+    # generating an array 
+    x = np.linspace(-10, 10, 100)
 
-# making a neuron
-w = np.random.randn()
-b = np.random.rand()
-activation = "relu"
-neuron = Neuron(w, b, activation) 
+    # making a neuron
+    w = np.random.randn()
+    b = np.random.rand()
+    activation = "relu"
+    neuron = Neuron(w, b, activation=activation) 
 
-# Function of array 
-y = neuron.forward(x) 
+    # Function of array 
+    y = neuron.forward(x) 
 
-# plotting 
-plt.figure()
-plt.plot(x, y)
-plt.show()
+    # plotting 
+    plt.figure()
+    plt.plot(x, y)
+    plt.show()
 
-# Random numbers in python 
-random_normal_array = np.random.randn(1000)
-random_uniform_array = np.random.rand(1000)
-plt.figure()
-plt.hist(random_normal_array)
-plt.show()
+    # Random numbers in python 
+    random_normal_array = np.random.randn(1000)
+    random_uniform_array = np.random.rand(1000)
+    plt.figure()
+    plt.hist(random_normal_array)
+    plt.show()
 
-plt.figure()
-plt.hist(random_uniform_array)
-plt.show()
+    plt.figure()
+    plt.hist(random_uniform_array)
+    plt.show()
 
 
