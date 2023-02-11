@@ -46,5 +46,5 @@ I have made a new bit of code in the same folder as the NN code today. It’s ca
 Now try and plot these for some different weights, and in particular, different `n` values. How do the functions look? Save some screenshots of plots that look interesting
 
 Tips:
-- Remember you can generate entire random arrays by either `np.random.randn(n)` or `numpy.random.rand(n)`.
+- Remember you can generate entire random arrays by either `np.random.randn(n)` or `np.random.rand(n)`.
 - Numpy Arrays can be used just like lists. You can access elements by `myArray[i]`. You can also loop through them like lists: `for myItem in myArray`. You can get the length of an array like lists: `len(myArray)`. See the tutorial or ask me if you have any questions
