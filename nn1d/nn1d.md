@@ -25,7 +25,7 @@ Connect a few neurons together and see what the functions looks like. Does anyth
 1. A sequence of neurons, where the last one is a linear neuron (no activation function). 
 2. What about if you have two different neurons using the same input value, i.e. $a_1 = \sigma(w_1 x + b_1)$ and $a_2 = \sigma(w_2x + b_2)$ and then add their outputs together as your final output, i.e. $y = a_1 + a_2$
 3. Try number 2 but using different weightings on $a_1$ and $a_2$, i.e. we have new weights $v_1, v_2$, to output $y = v_1 a_1 + v_2 a_2$. You can choose random $v_1$ and $v_2$ as well.
-4. What about adding together $n$ neurons? That is, $a_1 = \sigma(w_1 x + b_n)$ all the way up to $a_n = \sigma(w_n x + b_n)$, and then summing them together with different weightings $y = \sum_{i=1}^{n} v_i a_i = v_1 a_1 + \dots + v_n a_n$.
+4. What about adding together $n$ neurons? That is, $a_1 = \sigma(w_1 x + b_n)$ all the way up to $a_n = \sigma(w_n x + b_n)$, and then summing them together with different weightings $y = v_1 a_1 + \dots + v_n a_n$.
 ### 3. Rewriting the multi-neuron sum as its own class 
 
 Instead of just a single `Neuron` class, let’s now write a class to do what number 4 does. The class should take in 
