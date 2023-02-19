@@ -1,22 +1,27 @@
 import numpy as np 
 import matplotlib.pyplot as plt 
 from neuron1d import Neuron
-num_neurons = 2000
-neurons = [] 
 
-for i in range(num_neurons):
-    w = np.random.randn() 
-    b = np.random.randn() 
-    activation = "sigmoid"
-    neurons.append(Neuron(w, b, activation))
+activation = "sigmoid"
+x = np.linspace(-10, 10, 100)
+wb1 = np.random.randn(2)
+neuron1 = Neuron(wb1[0], wb1[1], activation=activation)
 
-x = np.linspace(-10, 10)
-y_neuron = 0
-output_weights = np.random.randn(num_neurons)
-for neuron, output_weight in zip(neurons, output_weights):
-    y_neuron += neuron.forward(x) * output_weight / num_neurons
+wb2 = np.random.randn(2)
+neuron2 = Neuron(wb2[0], wb2[1], activation=activation)
 
-plt.plot(x, y_neuron)
+wb3 = np.random.randn(2)
+neuron3 = Neuron(wb3[0], wb3[1], activation=activation)
+
+v = np.random.randn(3)
+
+plt.figure()
+y = v[0] * neuron1.forward(x) +  v[1] * neuron2.forward(x) + v[2] * neuron3.forward(x)
+plt.plot(x,y)
 plt.show()
 
 
+# Dot product 
+w = np.random.randn(4)
+v = np.random.randn(4)
+vw = np.inner(v, w)

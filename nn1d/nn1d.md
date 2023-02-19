@@ -1,5 +1,25 @@
 # NN1D: investigating neural networks in 1D 
 
+
+## Feb 18 
+### 1. Plotting some 2D functions in numpy 
+This week we will try and plot some 2D functions $f(x_1, x_2)$ (or maybe you want to write this as $f(x,y)$). Look at the example in `plotting_2d.py`. Here we have $f(x, y) = x^2 + y^2$. There are a couple of functions being used 
+1. `xgv = np.linspace(-1, 1, n_points)` creates a 1D [-1, ..., 1] with number of points equal to `n_points` 
+2. `X, Y = np.meshgrid(xgv, ygv)` takes two 1D grids and creates a 2D grid corresponding to the $x$ and $y$ values
+3. `Q = quadratic(X,Y)` evaluates the quadratic function at each pair of $x,y$ points on the grid
+4. `plt.contourf` or `ax.plot_surface()` can plot the function of 2 variables given the `x,y` grid and the values $f(x,y)$ on the grid. 
+
+Try look into the example and check that you understand what's going on
+1. See what `X`, `Y`, `Q` look like. You can reduce the `n_points` and print out their values. 
+2. Try plotting some other 2D functions, e.g. `f(x,y) = sin(x) sin(y)` over the box $-10 \leq x \leq 10$ and $-10 \leq y \leq 10$.
+
+You can just play around with the code and add this to it. 
+
+### 2. Some multivariable calculus revision
+Remind yourself of the gradient, $\nabla f$, of a multivariable function $f(x,y)$. How do you compute it and what does it mean? What about functions with $n$ inputs, $f(x_1, x_2, \dots, x_n)$?
+
+Next time we will start trying to optimize multivariable functions.
+
 ## Feb 10
 
 We are interested in seeing how well neural networks can approximate functions $y = f(x)$ in 1D, i.e. $x \in \mathbb{R}$  And $y \in \mathbb{R}$ . Here are some things to do for this week 

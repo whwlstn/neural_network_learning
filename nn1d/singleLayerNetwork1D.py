@@ -13,11 +13,18 @@ class SingleLayerNetwork1D:
         Given input x, return the output of the network 
         """
         if self.activation == "sigmoid":
-            return sigmoid(self.weight_input * x + self.bias_input)
+            a = sigmoid(self.weight_input * x + self.bias_input)
+            y = np.inner(self.weights_output, a)
+            return y 
+
         if self.activation == "relu":
-            return relu(self.weight_input * x + self.bias_input)
+            a = relu(self.weight_input * x + self.bias_input)
+            y = np.inner(self.weights_output, a)
+            return y 
         else:
-            return self.weight_input * x + self.bias_input
+            a = self.weight_input * x + self.bias_input
+            y = np.inner(self.weights_output, a)
+            return y 
     
     def update(self, w_new, b_new):
         pass
@@ -30,17 +37,21 @@ def relu(x):
 
 if __name__ == "__main__":
     # generating an array
-    x = np.linspace(-10, 10, 100)
-
+    x = np.linspace(-1, 1, 100)
     # making a neuron
-    w = np.random.randn()
-    b = np.random.randn()
-    activation = "relu"
-    neuron = SingleLayerNetwork1D(w, b, activation=activation)
+    width = 100
+    w = np.random.randn(width)
+    b = np.random.randn(width)
+    v = np.random.randn(width)
+    activation = "sigmoid"
+    layer = SingleLayerNetwork1D(w, b, v, activation=activation)
 
     # Function of array
-    y = SingleLayerNetwork1D.foward(x)
+    y = np.zeros(x.shape)
+    for i in range(len(x)):
+        y[i] = layer.forward(x[i])
 
+    # y = layer.forward(x)
     # plotting
     plt.figure()
     plt.plot(x, y)
