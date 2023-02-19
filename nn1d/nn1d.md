@@ -11,7 +11,7 @@ This week we will try and plot some 2D functions $f(x_1, x_2)$ (or maybe you wan
 
 Try look into the example and check that you understand what's going on
 1. See what `X`, `Y`, `Q` look like. You can reduce the `n_points` and print out their values. 
-2. Try plotting some other 2D functions, e.g. `f(x,y) = sin(x) sin(y)` over the box $-10 \leq x \leq 10$ and $-10 \leq y \leq 10$.
+2. Try plotting some other 2D functions, e.g. $f(x,y) = sin(x) sin(y)$ over the box $-10 \leq x \leq 10$ and $-10 \leq y \leq 10$.
 
 You can just play around with the code and add this to it. 
 
