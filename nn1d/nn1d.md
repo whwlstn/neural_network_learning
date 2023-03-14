@@ -4,7 +4,7 @@
 ## Mar 10
 ### 1. Steepest Descent Implementation 
 Recall the algorithm/pseudo code we wrote for steepest descent. Complete the implementation in `steepestDescent.py` to solve the optimization problem
-$$ \min_{x} f(x) $$ 
+$ \min_{x} f(x) $ 
 given the function `f_fun` and its gradient `g_fun`. Note, here `f_fun` is a function that takes in a vector $x$ (numpy array) of size $n \geq 1 $, and the gradient `g_fun` takes in $x$ and returns something the same size as $x$. 
 
 ### 2. Optimization on quadratics
