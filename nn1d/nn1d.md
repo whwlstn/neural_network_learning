@@ -9,7 +9,7 @@ given the function `f_fun` and its gradient `g_fun`. Note, here `f_fun` is a fun
 
 ### 2. Optimization on quadratics
 Test the algorithm on a quadratic function 
-$$ f(x) = a_1 x_1^2 + a_2 x_2^2 $$ 
+$$f(x) = a_1 x_1^2 + a_2 x_2^2$$ 
 where $x = (x_1, x_2)$ is a point in 2D, and the coefficients $a_1, a_2 > 0$. Note that this has the optimum at $x^* = (0,0)$. You can check if your implementation converges to this optimum.
 
 I have written the quadratic function in `optimize_quadratic.py`. You can import `steepestDescent` from your own implementation and use it in `optimize_quadratic.py`. 
