@@ -1,6 +1,19 @@
 # NN1D: investigating neural networks in 1D 
 
 
+## Mar 10
+### 1. Steepest Descent Implementation 
+Recall the algorithm/pseudo code we wrote for steepest descent. Complete the implementation in `steepestDescent.py` to solve the optimization problem
+$$\min_{x} f(x)$$ 
+given the function `f_fun` and its gradient `g_fun`. Note, here `f_fun` is a function that takes in a vector $x$ (numpy array) of size $n \geq 1 $, and the gradient `g_fun` takes in $x$ and returns something the same size as $x$. 
+
+### 2. Optimization on quadratics
+Test the algorithm on a quadratic function 
+$$f(x) = a_1 x_1^2 + a_2 x_2^2$$ 
+where $x = (x_1, x_2)$ is a point in 2D, and the coefficients $a_1, a_2 > 0$. Note that this has the optimum at $x^* = (0,0)$. You can check if your implementation converges to this optimum.
+
+I have written the quadratic function in `optimize_quadratic.py`. You can import `steepestDescent` from your own implementation and use it in `optimize_quadratic.py`. 
+
 ## Feb 18 
 ### 1. Plotting some 2D functions in numpy 
 This week we will try and plot some 2D functions $f(x_1, x_2)$ (or maybe you want to write this as $f(x,y)$). Look at the example in `plotting_2d.py`. Here we have $f(x, y) = x^2 + y^2$. There are a couple of functions being used 
