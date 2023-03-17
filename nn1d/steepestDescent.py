@@ -16,6 +16,16 @@ def steepestDescent(f_fun, g_fun, x0, step_size, max_iter=100, f_tol=1e-8, g_tol
     Returns: 
     a list [x_0, ..., x_k], the sequence of iterates produced by the optimization algorithm
     """
-    pass 
+    
+    for k in range(max_iter + 1):
+        
+        if g_fun <= g_tol:
+            break
+        
+        if 
+    
+    return 
+    
+    
 
 
