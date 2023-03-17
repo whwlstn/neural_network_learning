@@ -3,12 +3,13 @@ import matplotlib.pyplot as plt
 
 # We will try plotting contours of functions of 2D 
 def quadratic(x, y):
-    return x**2 + y**2 
+   # return x**2 + y**2 
+   return np.sin(x) * np.sin(y)
 
 # These create uniformly spaced arrays in x and y direction 
 n_points = 100
-xgv = np.linspace(-1, 1, n_points)
-ygv = np.linspace(-1, 1, n_points)
+xgv = np.linspace(-10, 10, n_points)
+ygv = np.linspace(-10, 10, n_points)
 
 # This creates a 2D grid of x and y values i.e. X has dimensions 100 by 100 
 X, Y = np.meshgrid(xgv, ygv)
