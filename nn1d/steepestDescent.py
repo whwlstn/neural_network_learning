@@ -25,7 +25,9 @@ def steepestDescent(f_fun, g_fun, x0, step_size, max_iter=100, f_tol=1e-8, g_tol
         if 
     
     return 
+
+def f_fun:
     
-    
+def g_fun:
 
 
