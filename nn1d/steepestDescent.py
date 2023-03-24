@@ -16,18 +16,22 @@ def steepestDescent(f_fun, g_fun, x0, step_size, max_iter=100, f_tol=1e-8, g_tol
     Returns: 
     a list [x_0, ..., x_k], the sequence of iterates produced by the optimization algorithm
     """
-    
+    x_current = x0.copy()
+    x_all = [x_current.copy()]
+    f_current = f_fun(x_current)
     for k in range(max_iter + 1):
-        
-        if g_fun <= g_tol:
-            break
-        
-        if 
-    
-    return 
+        g_current = g_fun(x_current)
+        if np.linalg.norm(g_current) < g_tol:
+            print("Gradient norm tolerance reached, breaking")
+            break 
 
-def f_fun:
-    
-def g_fun:
+        x_current -= step_size * g_current
+        x_all.append(x_current.copy())
 
+        f_new = f_fun(x_current)
+        if np.abs(f_new - f_current) < f_tol:
+            print("Function difference tolerance reached, breaking")
+            break 
+        f_current = f_new 
 
+    return np.array(x_all)
